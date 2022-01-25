@@ -1,8 +1,9 @@
 <?php 
     $text = "I'm in love using PHP";
     $paragraph = strlen($text);
-    $badword = str_replace( 'love', '***', $text );
-    $censoredParagraph = strlen($badword);
+    $bad_word = $_GET["word"];
+    $replaced_text = str_replace('$bad_word', '***', $text);
+    $censoredParagraph = strlen($replaced_text);
 ?>
 
 
@@ -23,8 +24,10 @@
 
     <hr>
 
-    <p><?php echo $badword ?></p>
+    <p>La parola da censurare è <?php echo $bad_word ?></p>
 
-    <p><?php echo 'Questo paragrafo è lungo: ' . $censoredParagraph ?></p>
+    <p><?php echo $replaced_text ?></p>
+
+    <p><?php echo 'Questo paragrafo è lungo: ' . $censoredParagraph?></p>
 </body>
 </html>
