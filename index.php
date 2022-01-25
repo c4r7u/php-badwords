@@ -2,7 +2,7 @@
     $text = "I'm in love using PHP";
     $paragraph = strlen($text);
     $bad_word = $_GET["word"];
-    $replaced_text = str_replace('$bad_word', '***', $text);
+    $replaced_text = str_replace($bad_word, '***', $text);
     $censoredParagraph = strlen($replaced_text);
 ?>
 
